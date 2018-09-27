@@ -78,7 +78,7 @@ Using a python3:7:latest docker image, we will walk through the mechanic of shap
 
     1.2  Create a docker network subnet:
 
-    *sudo docker network create --subnet=172.19.0.0/16 webblog_net*
+    *sudo docker network create --subnet=172.20.0.0/16 webblog_net*
 
     1.3  Run container:    
 
@@ -141,7 +141,7 @@ Now that we committed a snapshot, further build up should be referenced to image
 
 Let's connect to the saved image and finish it up.
 
-    sudo docker run -d -it deploy_webblog:v1 "/bin/bash"
+        sudo docker run -d -it deploy_webblog:v1 "/bin/bash"
     cd webblogserver; tar -xvf django_project.tar
     cd django-project/django-project
     python manage.py runserver 
@@ -164,32 +164,34 @@ Quit the server with CONTROL-C.
 
 In order to access the server inside this conainer, we need to configure django for deploy and then expose its port. 
 
-cd /webblogserver/django-project/django_project/django_project
+    cd /webblogserver/django-project/django_project/django_project; 
 pyvim settings.py
 
 Change the folowing:
 
-[ALLOWED_HOSTS] = ['172.19.0.2', '192.168.0.17']
+[ALLOWED_HOSTS] = ['172.20.0.2', '192.168.0.17']
 
-> (Where `172.19.0.2` belongs to the subnet `webblog_net` and `192.168.0.17` is the local host's ip address
+> (Where `172.20.0.2` belongs to the subnet `webblog_net` and `192.168.0.17` is the local host's ip address
 e.g.
 The web would be accessible via
-http://172.19.0.2:1111/
-and http://192.168.0.17:7777)
+http://172.20.0.2:3333/
+and http://192.168.0.17:1111)
 
 
 
 Let's run docker commit and save the running container once again.
 
 
+    
+
     sudo docker commit -m "Works-in-progress source code in place" b92adca3e8e0 deploy_webblog:v2
 
 Finally, run the container with exposure to subnet webblog_net and mapped port
 
-sudo ufw allow 7777/tcp
+    sudo ufw allow 3333/tcp
 sudo ufw reload
 
-sudo docker run -d -p 7777:1111 --name=webblog_app --net webblog_net --ip 172.19.0.2 -it deploy_webblog:v3 
+sudo docker run -d -p 3333:1111 --name=webblog_app --net webblog_net --ip 172.20.0.2 -it deploy_webblog:v3 
 
 Connect to the container:
 
