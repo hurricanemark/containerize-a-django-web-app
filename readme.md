@@ -195,7 +195,7 @@ Let's run docker commit and save the running container once again.
 
     
 
-    sudo docker commit -m "Works-in-progress source code in place" b92adca3e8e0 deploy_webblog:v2
+    sudo docker commit -m "Works-in-progress source code in place" b92adca3e8e0 deploy_webblog:v3
 
 Finally, run the container with exposure to subnet webblog_net and mapped port
 
