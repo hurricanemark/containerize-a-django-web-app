@@ -189,17 +189,21 @@ Let's run docker commit and save the running container once again.
 Finally, run the container with exposure to subnet webblog_net and mapped port
 
     sudo ufw allow 3333/tcp
-sudo ufw reload
+    sudo ufw reload
 
-sudo docker run -d -p 3333:1111 --name=webblog_app --net webblog_net --ip 172.20.0.2 -it deploy_webblog:v3 
+
+
+    sudo docker run -d -p 3333:1111 --name=webblog_app --net webblog_net --ip 172.20.0.2 -it deploy_webblog:v3 
 
 Connect to the container:
 
-sudo docker run -it deploy_webblog:v3 '/bin/bash'
 
-cd webblogserver/django-project/djengo-project
 
-python manage.py runserver 172.19.0.2:1111
+    sudo docker run -it deploy_webblog:v3 '/bin/bash'
+
+    cd webblogserver/django-project/djengo-project
+
+    python manage.py runserver 172.19.0.2:1111
 
 
 
