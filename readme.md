@@ -5,7 +5,7 @@ This article describes in small details how to transform your python web app pro
 Given that we have a django python web app project in development environment; a sample can be found at [django web blog source](https://github.com/hurricanemark/django-web-blog-), to deploy using docker container will involve the following steps.
 
 ## I.  Pre-requisites 
-On Ubuntu 16.04, install docker-ce, git, and python3.7 (optional).  
+On Ubuntu 16.04, install docker-ce, git, and python3.7.  
 
 
 In most cases, you could simply run a single command (`sudo apt install docker.io`).  However, a preferable up-to-date docker-ce installation can be done with the following steps.  For once, you would have a strackable local repo reference in your environment.
@@ -212,7 +212,7 @@ Connect to the container:
 
     sudo docker run -it deploy_webblog:v3 '/bin/bash'
 
-    cd webblogserver/django-project/djengo-project
+    cd webblogserver/django-project/django-project
 
     python manage.py runserver 172.19.0.2:1111
 
