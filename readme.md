@@ -137,7 +137,14 @@ Using another console, find the twelve digits CONTAIN_ID of python:3.7 and tag i
 
 ---
 
+ 2. **Deploy docker image**
+
+
 Now that we committed a snapshot, further build up should be referenced to image named `deploy_webblog:v1`.  e.g. If you exit out of the container, your work will still remain.
+
+
+ 2.1 Test run
+
 
 Let's connect to the saved image and finish it up.
 
@@ -161,11 +168,15 @@ Quit the server with CONTROL-C.
 ```
 
 
+ 2.2  Configure for deployment
+
 
 In order to access the server inside this conainer, we need to configure django for deploy and then expose its port. 
 
     cd /webblogserver/django-project/django_project/django_project; 
-pyvim settings.py
+
+
+    pyvim settings.py
 
 Change the folowing:
 
