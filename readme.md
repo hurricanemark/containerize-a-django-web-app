@@ -42,13 +42,13 @@ In most cases, you could simply run a single command (`sudo apt install docker.i
 > (Where user_name, email_id are from your GitHub registry.  If you don't have them, use local user name, and your email as references with respect to your local git settings only).
 
 
- 5. **Install Python3.6**
+ 5. **Install Python3.7**
 
-    *sudo add-apt-repository ppa:jonathonf/python-3.6*
+    *sudo add-apt-repository ppa:jonathonf/python-3.7*
 
     *sudo apt-get update*
 
-    *sudo apt-get install python3.6*
+    *sudo apt-get install python3.7*
 
     *python --version*
 
