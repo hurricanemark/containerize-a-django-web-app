@@ -205,11 +205,16 @@ Let's run docker commit and save the running container once again.
 
     sudo docker commit -m "Works-in-progress source code in place" b92adca3e8e0 deploy_webblog:v3
 
-Finally, run the container with exposure to subnet webblog_net and mapped port
+
+On your local host, allow port 3333/tcp.  This enables your network to access the web app via port 3333 on your host.
+
 
     sudo ufw allow 3333/tcp
     sudo ufw reload
 
+
+
+Finally, run the container with exposure to subnet webblog_net and mapped port
 
 
     sudo docker run -d -p 3333:1111 --name=webblog_app --net webblog_net --ip 172.20.0.2 -it deploy_webblog:v3 
