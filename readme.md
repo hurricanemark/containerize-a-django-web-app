@@ -193,7 +193,7 @@ and http://192.168.0.17:1111)
 Let's run docker commit and save the running container once again.
 
 
-    
+    python manage.py check --deploy
 
     sudo docker commit -m "Works-in-progress source code in place" b92adca3e8e0 deploy_webblog:v3
 
