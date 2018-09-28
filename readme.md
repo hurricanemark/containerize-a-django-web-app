@@ -137,7 +137,7 @@ Using another console, find the twelve digits CONTAIN_ID of python:3.7 and tag i
 
 ---
 
- 2. **Deploy docker image**
+## III.  Deploy the docker image 
 
 
 
