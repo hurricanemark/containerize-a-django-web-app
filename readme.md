@@ -66,7 +66,7 @@ In most cases, you could simply run a single command (`sudo apt install docker.i
     *git clone https://github.com/hurricanemark/django-web-blog-.git*
 
 
-## II. Build -- Start from a Base Docker image
+## II. Build From a Base Docker Image
 Using a python3:7:latest docker image, we will walk through the mechanic of shaping up only the essential components to run a web application inside a container.  We would of course compile the followings into a Dockerfile at a later time.  But for the sake of understanding what it takes; Let's approach with small, manual steps.
 
  1. **Working with a docker container**
@@ -137,7 +137,7 @@ Using another console, find the twelve digits CONTAIN_ID of python:3.7 and tag i
 
 ---
 
-## III.  Deploy the docker image 
+## III.  Deploy the Docker Image 
 
 
 
