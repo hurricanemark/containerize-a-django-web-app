@@ -174,7 +174,9 @@ Quit the server with CONTROL-C.
 
  2.2  Configure for deployment
 
+
 Important note:  Please consult proper [delpoyment to production steps](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment).  Practicing engineering as close to production as you can should help avoiding surprises.  
+
 
 
 In order to access the server inside this conainer, we need to configure django for deploy and then expose its port. 
