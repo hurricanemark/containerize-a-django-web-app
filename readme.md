@@ -145,7 +145,7 @@ Important note:  Please consult proper [delpoyment to production steps](https://
 
 
 
-Since we are deploying to a sandbox, let's ksip production checks and proceed.  Now that we committed a snapshot, further build up should be referenced to image named `deploy_webblog:v1`.  e.g. If you exit out of the container, your work will still remain.
+Since we are deploying to a sandbox, let's skip the production checks and proceed.  Now that we committed a snapshot, further build up should be referenced to image named `deploy_webblog:v1`.  e.g. If you exit out of the container, your work will still remain.
 
 
 
