@@ -139,8 +139,10 @@ Using another console, find the twelve digits CONTAIN_ID of python:3.7 and tag i
 
  2. **Deploy docker image**
 
+Important note:  Please consult proper [delpoyment to production steps](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment)
 
-Now that we committed a snapshot, further build up should be referenced to image named `deploy_webblog:v1`.  e.g. If you exit out of the container, your work will still remain.
+
+Since we are deploying to a sandbox, let's ksip production checks and proceed.  Now that we committed a snapshot, further build up should be referenced to image named `deploy_webblog:v1`.  e.g. If you exit out of the container, your work will still remain.
 
 
  2.1 Test run
